@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.05.2
+%define		kdeappsver	24.08.0
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kfourinline
 Summary:	kfourinline
 Name:		ka6-%{kaname}
-Version:	24.05.2
+Version:	24.08.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications/Games
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	627e361e8e63939b769dab7addbaebc0
+# Source0-md5:	4c07bff96f11443fc1973197ce1cd337
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= 5.11.1
@@ -49,8 +49,8 @@ strategies.
 
 %description -l pl.UTF-8
 KFourInLine jest grą planszową dla dwóch graczy opartą na grze
-Connect-Four (Połącz-Cztery). Gracze starają się zbudować rząd składający
-się z czterech elementów używając różnych strategii.
+Connect-Four (Połącz-Cztery). Gracze starają się zbudować rząd
+składający się z czterech elementów używając różnych strategii.
 
 %prep
 %setup -q -n %{kaname}-%{version}
@@ -89,3 +89,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kfourinline
 %{_datadir}/metainfo/org.kde.kfourinline.appdata.xml
 %{_datadir}/qlogging-categories6/kfourinline.categories
+%{_datadir}/qlogging-categories6/kfourinline.renamecategories
